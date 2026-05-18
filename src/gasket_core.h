@@ -5,6 +5,16 @@
  *
  * Copyright (C) 2018 Google, Inc.
  */
+#include <linux/version.h>
+
+/* RHEL release macros for compatibility */
+#ifndef RHEL_RELEASE_VERSION
+#define RHEL_RELEASE_VERSION(a, b) (((a) << 8) + (b))
+#endif
+#ifndef RHEL_RELEASE_CODE
+#define RHEL_RELEASE_CODE 0
+#endif
+
 #ifndef __GASKET_CORE_H__
 #define __GASKET_CORE_H__
 
